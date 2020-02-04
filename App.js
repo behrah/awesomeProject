@@ -8,7 +8,7 @@
 
 
 // just for test
-
+// test 2
 import React from 'react';
 import {
   SafeAreaView,
