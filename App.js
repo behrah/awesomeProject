@@ -6,6 +6,9 @@
  * @flow
  */
 
+
+// just for test
+
 import React from 'react';
 import {
   SafeAreaView,
