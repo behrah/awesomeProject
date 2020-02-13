@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.white,
   },
   sectionContainer: {
-    marginTop: 32,
+    marginTop: 30,
     paddingHorizontal: 24,
   },
   sectionTitle: {
