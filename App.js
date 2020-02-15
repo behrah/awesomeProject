@@ -26,32 +26,15 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import {Card} from './src/models/jinPost';
-
-export default class App extends Component{
-  Card = (rank, suit) => {
-    this.rank = rank;
-    this.suit = suit;
-  };
-
-  createCard = () => {
-    let CardObj = {};
-    let card = new this.Card('3', 'Hearts');
-    console.log(card);
-  };
-
-  render(){
+export default class App extends React.Component {
+  render() {
     return (
-      <>
-        <StatusBar barStyle="dark-content" />
-       <View >
-         <Text>behzad</Text>
-       </View>
-      </>
+      <View>
+        <Text style={styles.sectionTitle}>behzad</Text>
+      </View>
     );
   }
-  
-};
+}
 
 const styles = StyleSheet.create({
   scrollView: {
@@ -91,5 +74,3 @@ const styles = StyleSheet.create({
     textAlign: 'right',
   },
 });
-
-
