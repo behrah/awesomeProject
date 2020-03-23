@@ -15,15 +15,14 @@ import {
   Text,
   Button,
   TextInput,
+  Image,
 } from 'react-native';
-
-import styles from './src/styles/mainStyle';
 
 export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: ''
+      text: '',
     };
   }
 
@@ -31,20 +30,49 @@ export default class App extends Component {
     return (
       <View
         style={{
+          margin: 10,
           flex: 1,
-          justifyContent: 'space-between',
+          justifyContent: 'space-around',
           alignItems: 'center',
+          flexDirection: 'row',
         }}>
-        <Text style={{backgroundColor: 'red'}}>
-          salam {this.state.text} aziz
-        </Text>
-        <TextInput
-          style={{flex: 1, height: 40}}
-          placeholder="enter your name"
-          value={this.state.text}
-          onTextChange={(text)=>this.setState({text})}
+        <Button
+          title="ذخیره اطلاعات"
+          style={{
+            margin: 10,
+            alignItems: 'center',
+          }}
         />
-        
+
+        <View
+          style={{
+            marginStart: 5,
+            flex: 1,
+            height: 40,
+            borderWidth: 1,
+            borderRadius: 5,
+            borderColor: '#000',
+            flexDirection: 'row',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+          <Image
+            source={require('./src/images/baseline_call_black_24dp.png')}
+            style={{
+              margin: 5,
+              padding: 10,
+              width: 25,
+              height: 25,
+              alignItems: 'center',
+            }}
+          />
+          <TextInput
+            style={{flex: 1}}
+            placeholder="شماره تلفن خود را وارد کنید"
+            value={this.state.text}
+            onChangeText={text => this.setState({text})}
+          />
+        </View>
       </View>
     );
   }
